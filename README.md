@@ -23,3 +23,8 @@ I created 3 forecasting models to determine the demand for product 993, chosen a
 3. Finally, seeing as this was clearly not a linear data set, I chose to create a gradient boosting model over my data. Gradient boosting models work better than linear regression models for non-linear data sets, and I thought perhaps demand was seasonal each year. Unfortunately the gradient boosting model did even worse than my linear models, providing me with an R^2 value of ~ -0.005. 
 
 # Results/ Conclusions
+In conclusion, none of the models did well when predicting this data set. A number of factors that likely contributed:
+1- This data set has no clear patterns/ seasonality that repeats annually. 
+2- Most days have an Order_Demand of 0, as opposed to a constant supply of orders.
+3- Outlying large and negative orders skew the data set (although large negatives were removed).
+Were I to redo this project I would search for a product who's demand values create a notable pattern that can be detected by my models. Overall the linear regressor using a 10-day moving average gave me the best results, although these results are still not worth using when simply guessing the average gets you closer to the true demand each day. 
